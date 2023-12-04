@@ -7,10 +7,13 @@ Original file is located at
     https://colab.research.google.com/drive/11BXOG71OUPPPSMJeC5weJCAA153y3OJn
 """
 
-#zad 4
+# zad 4
+
+
 def sprawdz_sume(a, b, c):
     suma_dwóch_pierwszych = a + b
     return suma_dwóch_pierwszych >= c
+
 
 # Przykład użycia funkcji:
 argument1 = 4
@@ -20,9 +23,12 @@ argument3 = 16
 wynik = sprawdz_sume(argument1, argument2, argument3)
 print(wynik)
 
-#zad 5
+
+# zad 5
+
 def sprawdz_obecnosc_wartosci(lista, wartosc):
     return wartosc in lista
+
 
 # Przykład użycia funkcji:
 moja_lista = [1, 2, 3, 4, 5]
@@ -31,7 +37,8 @@ moja_wartosc = 7
 wynik = sprawdz_obecnosc_wartosci(moja_lista, moja_wartosc)
 print(wynik)
 
-#zad 6
+
+# zad 6
 def polacz_i_przetworz_listy(lista1, lista2):
     # Połącz listy
     polaczona_lista = lista1 + lista2
@@ -45,6 +52,8 @@ def polacz_i_przetworz_listy(lista1, lista2):
     return przetworzona_lista
 
 # Przykład użycia funkcji:
+
+
 lista_1 = [1, 5, 3]
 lista_2 = [3, 3, 7]
 
