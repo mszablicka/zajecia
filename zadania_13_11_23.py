@@ -7,7 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/1Of8P9gw8Ahc1UsR0eIZNRdBgVp1LK7-d
 """
 
-#zad 1
+# zad 1
+
+
 class Student:
     def __init__(self, name, marks):
         self.name = name
@@ -17,6 +19,7 @@ class Student:
         average_marks = sum(self.marks) / len(self.marks)
         return average_marks > 60
 
+
 # Przykład użycia klasy:
 student1 = Student("Robert Kwiatkowski", [60, 65, 80])
 student2 = Student("Katarzyna Róża", [45, 90, 10])
@@ -25,9 +28,11 @@ wynik_student1 = student1.is_passed()
 wynik_student2 = student2.is_passed()
 
 print(f"{student1.name} - Czy zdał? {wynik_student1}")
+
 print(f"{student2.name} - Czy zdał? {wynik_student2}")
 
-#zad 2 cz 1
+
+# zad 2 cz 1
 class Library:
     def __init__(self, city, street, zip_code, open_hours, phone):
         self.city = city
@@ -44,18 +49,25 @@ class Library:
         print(f"Open Hours: {self.open_hours}")
         print(f"Phone: {self.phone}")
 
+
 # Przykład użycia klasy:
-library1 = Library("Katowice", "Kochanowskiego", "41-806", "9:00 AM - 5:00 PM", "520-555-333")
-library2 = Library("Zabrze", "Korczoka", "41-700", "11:00 AM - 6:00 PM", "999-222-111")
+library1 = Library("Katowice", "Kochanowskiego",
+                   "41-806", "9:00 AM - 5:00 PM", "520-555-333")
+library2 = Library("Zabrze", "Korczoka", "41-700",
+                   "11:00 AM - 6:00 PM", "999-222-111")
 
 # Wyświetlanie informacji o bibliotekach
 library1.display_info()
 print("\n")
 library2.display_info()
 
-#zad 2 cz 2
+
+# zad 2 cz 2
 class Employee:
-    def __init__(self, first_name, last_name, hire_date, birth_date, city, street, zip_code, phone):
+
+    def __init__(self, first_name, last_name,
+                 hire_date, birth_date, city, street,
+                 zip_code, phone):
         self.first_name = first_name
         self.last_name = last_name
         self.hire_date = hire_date
@@ -67,7 +79,8 @@ class Employee:
 
     def display_info(self):
         print(f"Employee Information:")
-        print(f"Name: {self.first_name} {self.last_name}")
+        print(f"Name: {self.first_name} "
+              f"{self.last_name}")
         print(f"Hire Date: {self.hire_date}")
         print(f"Birth Date: {self.birth_date}")
         print(f"City: {self.city}")
@@ -75,18 +88,28 @@ class Employee:
         print(f"Zip Code: {self.zip_code}")
         print(f"Phone: {self.phone}")
 
+
 # Przykład użycia klasy:
-employee1 = Employee("Robert", "Kwiatkowski", "2023-01-11", "1998-01-04", "Katowice", "Kwiatowa", "41-900", "199-999-333")
-employee2 = Employee("Anna", "Jankowska", "2020-03-21", "1999-03-23", "Ruda Śląska", "Zabrzańska", "41-500", "321-444-321")
+employee1 = Employee("Robert", "Kwiatkowski", "2023-01-11",
+                     "1998-01-04", "Katowice", "Kwiatowa",
+                     "41-900", "199-999-333")
+employee2 = Employee("Anna", "Jankowska", "2020-03-21",
+                     "1999-03-23", "Ruda Śląska", "Zabrzańska",
+                     "41-500", "321-444-321")
 
 # Wyświetlanie informacji o pracownikach biblioteki
 employee1.display_info()
+
 print("\n")
 employee2.display_info()
 
-#zad 2 cz 3
+# zad 2 cz 3
+
+
 class Book:
-    def __init__(self, library, publication_date, author_name, author_surname, number_of_pages):
+    def __init__(self, library, publication_date,
+                 author_name, author_surname,
+                 number_of_pages):
         self.library = library
         self.publication_date = publication_date
         self.author_name = author_name
@@ -100,18 +123,24 @@ class Book:
         print(f"Author: {self.author_name} {self.author_surname}")
         print(f"Number of Pages: {self.number_of_pages}")
 
+
 # Przykład użycia klasy:
-book1 = Book("Księgarnia Zabrzańska", "2021-02-11", "Karolina", "Drewno", 333)
-book2 = Book("Księgarnia Słoneczko", "1999-01-05", "Janusz", "Wolny", 150)
+book1 = Book("Księgarnia Zabrzańska",
+             "2021-02-11", "Karolina", "Drewno", 333)
+book2 = Book("Księgarnia Słoneczko",
+             "1999-01-05", "Janusz", "Wolny", 150)
+
 
 # Wyświetlanie informacji o książkach
 book1.display_info()
 print("\n")
 book2.display_info()
 
-#zad 2 cz 4
+
+# zad 2 cz 4
 class Order:
-    def __init__(self, employee, student, books, order_date):
+    def __init__(self, employee, student,
+                 books, order_date):
         self.employee = employee
         self.student = student
         self.books = books
@@ -119,62 +148,92 @@ class Order:
 
     def display_info(self):
         print("Order Information:")
-        print(f"Employee: {self.employee.first_name} {self.employee.last_name}")
-        print(f"Student: {self.student.first_name} {self.student.last_name}")
+        print(f"Employee: {self.employee.first_name} "
+              f"{self.employee.last_name}")
+        print(f"Student: {self.student.first_name} "
+              f"{self.student.last_name}")
         print("Books:")
         for book in self.books:
-            print(f"  - {book.title} by {book.author_name} {book.author_surname}")
+
+            print(f"  - {book.title} by "
+                  f"{book.author_name} {book.author_surname}")
+
         print(f"Order Date: {self.order_date}")
+
 
 # Przykład użycia klasy:
 class Employee:
+
     def __init__(self, first_name, last_name):
         self.first_name = first_name
         self.last_name = last_name
+
 
 class Student:
     def __init__(self, first_name, last_name):
         self.first_name = first_name
+
         self.last_name = last_name
 
+
 class Book:
-    def __init__(self, title, author_name, author_surname, number_of_pages):
+    def __init__(self, title, author_name,
+                 author_surname, number_of_pages):
+
         self.title = title
         self.author_name = author_name
         self.author_surname = author_surname
+
         self.number_of_pages = number_of_pages
+
 
 # Tworzenie obiektów Employee, Student, Book
 employee = Employee("Tomasz", "Taro")
 student = Student("Alicja", "Rower")
 books = [
-    Book("Metody badań jakościowych", "Robert", "Słonecznik", 350),
+    Book("Metody badań jakościowych",
+         "Robert", "Słonecznik", 350),
     Book("Rynek japoński", "Koe", "Tadashi", 250)
 ]
 
 # Tworzenie obiektu Order
-order_instance = Order(employee, student, books, "2023-12-23")
+
+order_instance = Order(employee,
+                       student, books, "2023-12-23")
+
 
 # Wyświetlanie informacji o zamówieniu
+
+
 order_instance.display_info()
 
-#zad 3
+
+# zad 3
 class Property:
-    def __init__(self, area, rooms, price, address):
+    def __init__(self, area,
+                 rooms, price, address):
         self.area = area
         self.rooms = rooms
         self.price = price
         self.address = address
 
     def display_info(self):
+
         print("Property Information:")
         print(f"Area: {self.area} sq. meters")
+
         print(f"Number of Rooms: {self.rooms}")
+
         print(f"Price: ${self.price}")
+
         print(f"Address: {self.address}")
 
+
 # Przykład użycia klasy:
-property_instance = Property(area=110, rooms=6, price=2500000, address="Korczoka 41b/1")
+property_instance = Property(area=110,
+                             rooms=6, price=2500000,
+                             address="Korczoka 41b/1")
+
 
 # Wyświetlanie informacji o posiadłości
 property_instance.display_info()
@@ -182,16 +241,21 @@ property_instance.display_info()
 
 class House(Property):
     def __init__(self, area, rooms, price, address, plot):
+
         # Wywołanie konstruktora klasy nadrzędnej (Property)
         super().__init__(area, rooms, price, address)
+
         self.plot = plot
 
     def display_info(self):
-        super().display_info()  # Wywołanie metody display_info klasy nadrzędnej
+        super().display_info()
         print(f"Plot Size: {self.plot} sq. meters")
 
 # Przykład użycia klasy:
-house_instance = House(area=150, rooms=3, price=220000, address="Słoneczna 33a/2", plot=200)
+
+
+house_instance = House(area=150, rooms=3, price=220000,
+                       address="Słoneczna 33a/2", plot=200)
 
 # Wyświetlanie informacji o domu
 house_instance.display_info()
@@ -200,15 +264,20 @@ house_instance.display_info()
 class Flat(Property):
     def __init__(self, area, rooms, price, address, floor):
         # Wywołanie konstruktora klasy nadrzędnej (Property)
+
         super().__init__(area, rooms, price, address)
+
         self.floor = floor
 
     def display_info(self):
-        super().display_info()  # Wywołanie metody display_info klasy nadrzędnej
+        super().display_info()
         print(f"Floor: {self.floor}")
 
 # Przykład użycia klasy:
-flat_instance = Flat(area=55, rooms=2, price=20000, address="Kalinowa 7c/12", floor=4)
+
+
+flat_instance = Flat(area=55, rooms=2, price=20000,
+                     address="Kalinowa 7c/12", floor=4)
 
 # Wyświetlanie informacji o mieszkaniu
 flat_instance.display_info()
