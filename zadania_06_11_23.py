@@ -7,39 +7,47 @@ Original file is located at
     https://colab.research.google.com/drive/1f2j_id-Ryih10CWZsDVJ3vXZjZ_ICkhc
 """
 
-#Zad 1
+# Zad 1
+
 
 def greet(name, surname):
-  return f"Cześć {name} {surname}!"
+    return f"Cześć {name} {surname}!"
+
 
 name = "Robert"
 surname = "Trawa"
 result = greet(name, surname)
 print(result)
 
-#Zad 2
+# Zad 2
+
 
 def multiply_numbers(x, y):
     result = x * y
     return result
 
-#Przykład użycia funkcji
+
+# Przykład użycia funkcji
 num1 = 7
 num2 = 3
 product = multiply_numbers(num1, num2)
 print(f"Iloczyn {num1} i {num2} wynosi: {product}")
 
-#Zad 3
+
+# Zad 3
+
 
 def is_even(number):
-  return number % 2 == 0
+    return number % 2 == 0
 
-#Przykład użycia funkcji
+
+# Przykład użycia funkcji
 num = 55
+
+
 is_even_result = is_even(num)
 
 if is_even_result:
     print("Liczba parzysta")
 else:
     print("Liczba nieparzysta")
-
